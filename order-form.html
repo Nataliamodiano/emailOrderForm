@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <title>The HTML5 Herald</title>
+      <meta name="description" content="The HTML5 Herald">
+      <meta name="author" content="SitePoint">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+      <link rel="stylesheet" href="order.css">
+   </head>
+   <body class="container order-form">
+      <div class="section">
+      <div class="row justify-content-between">
+         <div class="col-sm-7">
+            <form name="orderForm" method="post" action="emailOrder.php">
+               <fieldset>
+                  <div class="form-group">
+                     <h3>Customer Information</h3>
+                  </div>
+                  <div class="row">
+                     <div class="col-sm-6 form-group">
+                        <input id="form-first-name" type="text" class="form-control" placeholder="First Name" required>
+                     </div>
+                     <div class="col-sm-6 form-group">
+                        <input id="form-last-name" type="text" class="form-control" placeholder="Last Name" required>
+                     </div>
+                  </div>
+                  <div class="form-group">
+                     <input type="email" class="form-control" id="email" placeholder="Email" required>
+                  </div>
+                  <div class="form-group">
+                     <input type="tel" class="form-control" id="exampleInputPassword1" placeholder="Phone" required>
+                  </div>
+                  <span id="billingAddressFields">
+                     <div class="form-group">
+                        <h3>Billing Information</h3>
+                        <div id="billingMailingSame">
+                           <label>
+                           <input type="checkbox" id="billMail" checked="true">
+                           <b>Billing Address Same as Mailing Address</b>
+                           </label>
+                        </div>
+                     </div>
+                     <div class="form-group">
+                        <input type="text" id="bill-address-line1" class="form-control" placeholder="Address Line 1" required>
+                     </div>
+                     <div class="form-group">
+                        <input type="text" id="bill-address-line2" class="form-control" placeholder="Address Line 2">
+                     </div>
+                     <div class="form-group row">
+                        <div class="col-sm-12 col-md-5 form-group">
+                           <input type="text" id="bill-city" class="form-control" placeholder="City" required>
+                        </div>
+                        <div class="col-sm-6 col-md-3 form-group">
+                           <select class="form-control" id="bill-state" required>
+                              <option value="">--</option>
+                              <option value="AK">AK</option>
+                              <option value="AL">AL</option>
+                              <option value="AR">AR</option>
+                              <option value="AZ">AZ</option>
+                              <option value="CA">CA</option>
+                              <option value="CO">CO</option>
+                              <option value="CT">CT</option>
+                              <option value="DE">DE</option>
+                              <option value="FL">FL</option>
+                              <option value="GA">GA</option>
+                              <option value="HI">HI</option>
+                              <option value="IA">IA</option>
+                              <option value="ID">ID</option>
+                              <option value="IL">IL</option>
+                              <option value="IN">IN</option>
+                              <option value="KS">KS</option>
+                              <option value="KY">KY</option>
+                              <option value="LA">LA</option>
+                              <option value="MA">MA</option>
+                              <option value="MD">MD</option>
+                              <option value="ME">ME</option>
+                              <option value="MI">MI</option>
+                              <option value="MN">MN</option>
+                              <option value="MO">MO</option>
+                              <option value="MS">MS</option>
+                              <option value="MT">MT</option>
+                              <option value="NC">NC</option>
+                              <option value="ND">ND</option>
+                              <option value="NE">NE</option>
+                              <option value="NH">NH</option>
+                              <option value="NJ">NJ</option>
+                              <option value="NM">NM</option>
+                              <option value="NV">NV</option>
+                              <option value="NY">NY</option>
+                              <option value="OH">OH</option>
+                              <option value="OK">OK</option>
+                              <option value="OR">OR</option>
+                              <option value="PA">PA</option>
+                              <option value="RI">RI</option>
+                              <option value="SC">SC</option>
+                              <option value="SD">SD</option>
+                              <option value="TN">TN</option>
+                              <option value="TX">TX</option>
+                              <option value="UT">UT</option>
+                              <option value="VA">VA</option>
+                              <option value="VT">VT</option>
+                              <option value="WA">WA</option>
+                              <option value="WI">WI</option>
+                              <option value="WV">WV</option>
+                              <option value="WY">WY</option>
+                           </select>
+                        </div>
+                        <div class="col-sm-6 col-md-4 form-group">
+                           <input type="text" id="bill-zip-code" class="form-control" placeholder="Zip Code" required>
+                        </div>
+                     </div>
+                  </span>
+                  <span id="shippingAddressFields">
+                     <div class="form-group">
+                        <h3>Shipping Information</h3>
+                     </div>
+                     <div class="form-group">
+                        <input type="text" id="ship-address-line1" class="form-control" placeholder="Address Line 1">
+                     </div>
+                     <div class="form-group">
+                        <input type="text" id="ship-address-line2" class="form-control" placeholder="Address Line 2">
+                     </div>
+                     <div class="row">
+                        <div class="col-sm-12 col-md-5 form-group">
+                           <input type="text" id="ship-city" class="form-control" placeholder="City">
+                        </div>
+                        <div class="col-sm-6 col-md-3 form-group">
+                           <select class="form-control" id="ship-state">
+                              <option value="">--</option>
+                              <option value="AK">AK</option>
+                              <option value="AL">AL</option>
+                              <option value="AR">AR</option>
+                              <option value="AZ">AZ</option>
+                              <option value="CA">CA</option>
+                              <option value="CO">CO</option>
+                              <option value="CT">CT</option>
+                              <option value="DE">DE</option>
+                              <option value="FL">FL</option>
+                              <option value="GA">GA</option>
+                              <option value="HI">HI</option>
+                              <option value="IA">IA</option>
+                              <option value="ID">ID</option>
+                              <option value="IL">IL</option>
+                              <option value="IN">IN</option>
+                              <option value="KS">KS</option>
+                              <option value="KY">KY</option>
+                              <option value="LA">LA</option>
+                              <option value="MA">MA</option>
+                              <option value="MD">MD</option>
+                              <option value="ME">ME</option>
+                              <option value="MI">MI</option>
+                              <option value="MN">MN</option>
+                              <option value="MO">MO</option>
+                              <option value="MS">MS</option>
+                              <option value="MT">MT</option>
+                              <option value="NC">NC</option>
+                              <option value="ND">ND</option>
+                              <option value="NE">NE</option>
+                              <option value="NH">NH</option>
+                              <option value="NJ">NJ</option>
+                              <option value="NM">NM</option>
+                              <option value="NV">NV</option>
+                              <option value="NY">NY</option>
+                              <option value="OH">OH</option>
+                              <option value="OK">OK</option>
+                              <option value="OR">OR</option>
+                              <option value="PA">PA</option>
+                              <option value="RI">RI</option>
+                              <option value="SC">SC</option>
+                              <option value="SD">SD</option>
+                              <option value="TN">TN</option>
+                              <option value="TX">TX</option>
+                              <option value="UT">UT</option>
+                              <option value="VA">VA</option>
+                              <option value="VT">VT</option>
+                              <option value="WA">WA</option>
+                              <option value="WI">WI</option>
+                              <option value="WV">WV</option>
+                              <option value="WY">WY</option>
+                           </select>
+                        </div>
+                        <div class="col-sm-6 col-md-4 form-group">
+                           <input type="text" id="ship-zip-code" class="form-control" placeholder="Zip Code/Postal Code">
+                        </div>
+                     </div>
+                  </span>
+                  <div class="form-group">
+                     <h3>Credit Card Information</h3>
+                  </div>
+                  <div class="form-group">
+                     <select id="card-type" class="form-control" required>
+                        <option>Visa</option>
+                        <option>Mastercard</option>
+                        <option>American Express</option>
+                     </select>
+                  </div>
+                  <div class="row">
+                     <div class="col-sm-6 form-group">
+                        <input id="cc-first-name" type="text" class="form-control" placeholder="First Name" required>
+                     </div>
+                     <div class="col-sm-6 form-group">
+                        <input id="cc-last-name" type="text" class="form-control" placeholder="Last Name" required>
+                     </div>
+                  </div>
+                  <div class="form-group">
+                     <input type="text" id="cc-number" class="form-control" placeholder="0000 0000 0000 0000" required>
+                  </div>
+                  <div class="row">
+                     <div class="col-sm-5 col-md-3 form-group">
+                        <select id="cc-exp-mo" class="form-control" required>
+                           <option value="MM">MM</option>
+                           <option value="01">01</option>
+                           <option value="02">02</option>
+                           <option value="03">03</option>
+                           <option value="04">04</option>
+                           <option value="05">05</option>
+                           <option value="06">06</option>
+                           <option value="07">07</option>
+                           <option value="08">08</option>
+                           <option value="09">09</option>
+                           <option value="10">10</option>
+                           <option value="11">11</option>
+                           <option value="12">12</option>
+                        </select>
+                     </div>
+                     <span class="form-group xs-20l">/</span>
+                     <div class="col-sm-5 col-md-3 form-group">
+                        <select id="cc-exp-yr" class="form-control" required>
+                           <option value="YY">YY</option>
+                           <option value="19">19</option>
+                           <option value="20">20</option>
+                           <option value="21">21</option>
+                           <option value="22">22</option>
+                           <option value="23">23</option>
+                           <option value="24">24</option>
+                           <option value="25">25</option>
+                           <option value="26">26</option>
+                           <option value="27">27</option>
+                           <option value="28">28</option>
+                           <option value="29">29</option>
+                           <option value="30">30</option>
+                           <option value="31">31</option>
+                           <option value="32">32</option>
+                           <option value="33">33</option>
+                           <option value="34">34</option>
+                           <option value="35">35</option>
+                           <option value="36">36</option>
+                           <option value="37">37</option>
+                           <option value="38">38</option>
+                           <option value="39">39</option>
+                           <option value="40">40</option>
+                        </select>
+                     </div>
+                     <div class="col-sm-5 col-md-4 form-group">
+                        <input type="text" id="cc-cvv" class="form-control" placeholder="CVV" required>
+                     </div>
+                  </div>
+                  <br>
+                  <div class="form-group">
+                     <input type="text" id="reason" class="form-control" placeholder="Please state your primary reason for purchasing the book (Optional)" />
+                  </div>
+               </fieldset>
+               <button type="submit" class="btn btn-primary">Submit Order</button>
+            </form>
+         </div>
+         <div class="col-sm-4">
+            <img src="book.png" />
+            <p>
+               Hard Cover ISBN: 978-0-4653740-1-9
+               <br>
+               Soft Cover ISBN: 978-0-4653740-4-0
+            </p>
+            <div class="form-group">
+               <select class="form-control col-sm-12 col-md-8" id="bookType" required>
+                  <option value="hard">Hard Cover</option>
+                  <option value="soft">Soft Cover</option>
+               </select>
+            </div>
+            <div class="form-group">
+               <label class="form-group-label" for="qty">Quantity:</label>
+               <div class="qty-input">
+                  <i class="less">-</i>
+                  <input type="text" value="1" id="qty"/>
+                  <i class="more">+</i>
+               </div>
+            </div>
+            <div class="form-group">
+               Price: $<span id="price"></span>
+            </div>
+            <div class="form-group">
+               Shipping & Handling: $9.95 per book
+            </div>
+            <div class="form-group">
+               Tax: $<span id="tax"></span>
+            </div>
+            <div class="form-group">
+               Total: $<span id="total"></span>
+            </div>
+         </div>
+      </div>
+      <script
+         src="https://code.jquery.com/jquery-3.3.1.min.js"
+         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+         crossorigin="anonymous"></script>
+      <script type="text/javascript" src="calcPrice.js"></script>
+   </body>
+</html>

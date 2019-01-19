@@ -1,0 +1,47 @@
+.order-form {
+	background: #fdfeee;
+}
+
+/* increment quantity */
+.qty-input {
+  border: 1px solid #ced4da;
+  height: 40px;
+  position: relative;
+  width: 122px;
+  border-radius: .25rem;
+}
+.qty-input i {
+  cursor: pointer;
+  font-family: serif;
+  height: 38px;
+  float: left;
+  line-height: 36px;
+  text-align: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  transition: all 150ms ease-out;
+  width: 33px;
+  font-size: 20px;
+  background: #FFF;
+}
+.qty-input i:active {
+  background-color: #F1F1F1;
+  transition: none;
+}
+.qty-input input {
+  border: 0px solid;
+  float: left;
+  font-size: 16px;
+  height: 38px;
+  text-align: center;
+  outline: none;
+  width: 54px;
+}
+
+@media (max-width: 575px) {
+	.xs-20l {
+		margin-left: 20px;
+	}
+}
